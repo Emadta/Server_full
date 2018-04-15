@@ -3,26 +3,19 @@ import java.io.Serializable;
 
 
 public class User implements Serializable {
-    private int id;
+    private static final long serialVersionUID = 1L;
     private String user ,email ,password;
 
 
 
-    public User(int id1 , String user1 , String email1 , String password1)
+    public User(String user1 , String email1 , String password1)
     {
-        id=id1;
         user=user1;
         email=email1;
         password=password1;
     }
 
-    public int getid() {
-        return id ;
-    }
 
-    public void setid(int num) {
-        id = num;
-    }
 
     public String getuser() {
         return user ;
@@ -47,7 +40,4 @@ public class User implements Serializable {
     public void setEmail(String em) {
         email = em;
     }
-
-
-
 }
